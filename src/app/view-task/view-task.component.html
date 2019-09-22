@@ -1,0 +1,18 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-3">
+                <div class="mt-5">
+                    <h5>Task List</h5>
+                    <div class="card" *ngFor="let task of taskList; let i = index">
+                        <div class="card-body">
+                            {{task}}
+                            <button class="btn btn-info" (click)="editTask(i)">Edit</button>
+                            <button class="btn btn-danger" (click)="deleteTask(i)">Delete</button>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

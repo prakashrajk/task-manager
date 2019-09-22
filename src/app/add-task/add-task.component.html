@@ -1,0 +1,18 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-3">
+                <form [formGroup]="taskForm" (ngSubmit)="isEdit ? addTask() : updateTask()">
+                    <div class="card card-body">
+                        <div class="form-group">
+                            <label for="" class="text-center">Task</label>
+                            <input type="text" class="form-control" formControlName="task">
+                        </div>
+                        <button class="btn btn-primary" *ngIf="isEdit">Add Task</button>
+                        <button class="btn btn-primary" *ngIf="!isEdit">Update Task</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
